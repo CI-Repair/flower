@@ -47,7 +47,6 @@ testpaths = ["flwr_baselines"]
 [tool.mypy]
 ignore_missing_imports = true
 strict = false
-plugins = "numpy.typing.mypy_plugin"
 
 [tool.pylint."MESSAGES CONTROL"]
 disable = "duplicate-code,too-few-public-methods,useless-import-alias,no-member,wrong-import-order"
@@ -132,7 +131,6 @@ learning-rate = 0.01
 results-save-dir = "results"
 fraction-evaluate = 0.0
 fraction-fit = 1.0
-
 
 [tool.flwr.federations]
 default = "local-simulation"
