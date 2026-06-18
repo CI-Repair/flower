@@ -1,8 +1,6 @@
----
-tags: [vision, simulation, video-tutorial]
-dataset: [Fashion-MNIST]
-framework: [torch]
----
+______________________________________________________________________
+
+## tags: \[vision, simulation, video-tutorial\] dataset: \[Fashion-MNIST\] framework: \[torch\]
 
 # Flower Simulation Step-by-Step
 

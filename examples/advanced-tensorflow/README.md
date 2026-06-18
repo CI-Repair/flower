@@ -1,8 +1,6 @@
----
-tags: [advanced, vision, fds, wandb]
-dataset: [Fashion-MNIST]
-framework: [keras, tensorflow]
----
+______________________________________________________________________
+
+## tags: \[advanced, vision, fds, wandb\] dataset: \[Fashion-MNIST\] framework: \[keras, tensorflow\]
 
 # Federated Learning with TensorFlow/Keras and Flower (Advanced Example)
 

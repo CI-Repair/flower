@@ -1,8 +1,6 @@
----
-tags: [quickstart, vision, fds]
-dataset: [CIFAR-10]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[quickstart, vision, fds\] dataset: \[CIFAR-10\] framework: \[torch, torchvision\]
 
 # Federated Learning with PyTorch and Flower (Quickstart Example)
 

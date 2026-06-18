@@ -13,7 +13,6 @@
 # limitations under the License.
 """Base model configuration for MobileNetV2."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import tensorflow as tf

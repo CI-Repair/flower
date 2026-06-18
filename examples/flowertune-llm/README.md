@@ -1,8 +1,6 @@
----
-tags: [llm, nlp, LLama]
-dataset: [Alpaca-GPT4]
-framework: [PEFT, torch]
----
+______________________________________________________________________
+
+## tags: \[llm, nlp, LLama\] dataset: \[Alpaca-GPT4\] framework: \[PEFT, torch\]
 
 # FlowerTune LLM: Federated LLM Fine-tuning with Flower
 

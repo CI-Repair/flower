@@ -13,7 +13,6 @@
 # limitations under the License.
 """Tests for tflite_transfer_converter."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import tempfile

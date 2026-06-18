@@ -13,6 +13,5 @@
 # limitations under the License.
 """Shortcuts for optimizer configurations."""
 
-
 from .adam import Adam
 from .sgd import SGD

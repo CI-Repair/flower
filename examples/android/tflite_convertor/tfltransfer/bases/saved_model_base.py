@@ -13,7 +13,6 @@
 # limitations under the License.
 """Base model configuration that reads a specified SavedModel."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import tensorflow as tf

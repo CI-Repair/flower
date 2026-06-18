@@ -31,8 +31,6 @@ import grpc
 from cryptography.hazmat.primitives.asymmetric import ec
 from grpc import RpcError
 
-from flwr.app.error import Error
-from flwr.cli.config_utils import get_fab_metadata
 from flwr.client.grpc_adapter_client.connection import grpc_adapter
 from flwr.client.grpc_rere_client.connection import grpc_request_response
 from flwr.common import GRPC_MAX_MESSAGE_LENGTH, Context, Message, RecordDict
@@ -60,9 +58,9 @@ from flwr.server.superlink.ffs import Ffs, FfsFactory
 from flwr.supercore.object_store import ObjectStore, ObjectStoreFactory
 from flwr.supernode.cli.flwr_clientapp import flwr_clientapp
 from flwr.supernode.nodestate import NodeState, NodeStateFactory
+from flwr.supernode.servicer.clientappio import ClientAppInputs, ClientAppIoServicer
 
 DEFAULT_FFS_DIR = get_flwr_dir() / "supernode" / "ffs"
-from flwr.supernode.servicer.clientappio import ClientAppInputs, ClientAppIoServicer
 
 
 # pylint: disable=import-outside-toplevel

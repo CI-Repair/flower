@@ -1,8 +1,6 @@
----
-tags: [mobile, vision, sdk]
-dataset: [MNIST]
-framework: [Swift]
----
+______________________________________________________________________
+
+## tags: \[mobile, vision, sdk\] dataset: \[MNIST\] framework: \[Swift\]
 
 # FLiOS - A Flower SDK for iOS Devices with Example
 
