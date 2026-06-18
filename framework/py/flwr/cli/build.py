@@ -14,7 +14,6 @@
 # ==============================================================================
 """Flower command line interface `build` command."""
 
-
 import hashlib
 import zipfile
 from io import BytesIO
