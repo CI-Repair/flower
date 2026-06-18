@@ -1,8 +1,6 @@
----
-tags: [basic, vision, fds]
-dataset: [CIFAR-10]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[basic, vision, fds\] dataset: \[CIFAR-10\] framework: \[torch, torchvision\]
 
 # Federated Variational Autoencoder with PyTorch and Flower
 

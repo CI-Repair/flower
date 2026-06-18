@@ -1,8 +1,6 @@
----
-tags: [mods, monitoring, app]
-dataset: [CIFAR-10]
-framework: [wandb, tensorboard]
----
+______________________________________________________________________
+
+## tags: \[mods, monitoring, app\] dataset: \[CIFAR-10\] framework: \[wandb, tensorboard\]
 
 # Using custom mods 🧪
 

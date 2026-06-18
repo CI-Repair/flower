@@ -1,8 +1,6 @@
----
-tags: [quickstart, classification, tabular]
-dataset: [HIGGS]
-framework: [xgboost]
----
+______________________________________________________________________
+
+## tags: \[quickstart, classification, tabular\] dataset: \[HIGGS\] framework: \[xgboost\]
 
 # Federated Learning with XGBoost and Flower (Quickstart Example)
 

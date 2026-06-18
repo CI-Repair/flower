@@ -1,8 +1,6 @@
----
-tags: [advanced, secure_aggregation, privacy]
-dataset: [CIFAR-10]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[advanced, secure_aggregation, privacy\] dataset: \[CIFAR-10\] framework: \[torch, torchvision\]
 
 # Secure aggregation with Flower (the SecAgg+ protocol)
 

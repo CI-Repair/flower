@@ -1,9 +1,6 @@
----
-title: Federated Learning with MLX and Flower (Quickstart Example)
-tags: [quickstart, vision]
-dataset: [MNIST]
-framework: [MLX]
----
+______________________________________________________________________
+
+## title: Federated Learning with MLX and Flower (Quickstart Example) tags: \[quickstart, vision\] dataset: \[MNIST\] framework: \[MLX\]
 
 # Federated Learning with MLX and Flower (Quickstart Example)
 

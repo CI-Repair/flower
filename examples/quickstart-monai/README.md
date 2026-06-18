@@ -1,8 +1,6 @@
----
-tags: [quickstart, medical, vision]
-dataset: [MedNIST]
-framework: [MONAI]
----
+______________________________________________________________________
+
+## tags: \[quickstart, medical, vision\] dataset: \[MedNIST\] framework: \[MONAI\]
 
 # Federated Learning with MONAI and Flower (Quickstart Example)
 

@@ -2,7 +2,6 @@ import argparse
 from flwr_datasets import FederatedDataset
 from flwr_datasets.partitioner import IidPartitioner
 
-
 DATASET_DIRECTORY = "datasets"
 
 

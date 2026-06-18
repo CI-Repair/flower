@@ -1,8 +1,6 @@
----
-tags: [basic, vision, fds]
-dataset: [CIFAR-10]
-framework: [torch]
----
+______________________________________________________________________
+
+## tags: \[basic, vision, fds\] dataset: \[CIFAR-10\] framework: \[torch\]
 
 # PyTorch: From Centralized To Federated
 

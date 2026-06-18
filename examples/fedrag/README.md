@@ -1,9 +1,6 @@
----
-title: Federated RAG (FedRAG)
-tags: [fedrag, llm]
-dataset: [PubMed, StatPearls, Textbooks, Wikipedia, PubMedQA, BioASQ]
-framework: [FAISS, transformers]
----
+______________________________________________________________________
+
+## title: Federated RAG (FedRAG) tags: \[fedrag, llm\] dataset: \[PubMed, StatPearls, Textbooks, Wikipedia, PubMedQA, BioASQ\] framework: \[FAISS, transformers\]
 
 # Federated Retrieval Augmented Generation (FedRAG)
 

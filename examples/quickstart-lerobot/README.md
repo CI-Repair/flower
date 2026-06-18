@@ -1,8 +1,6 @@
----
-tags: [quickstart, vision, robotics, zk0]
-dataset: [pusht]
-framework: [lerobot]
----
+______________________________________________________________________
+
+## tags: \[quickstart, vision, robotics, zk0\] dataset: \[pusht\] framework: \[lerobot\]
 
 # Federated Learning with Hugging Face LeRobot and Flower (Quickstart Example)
 

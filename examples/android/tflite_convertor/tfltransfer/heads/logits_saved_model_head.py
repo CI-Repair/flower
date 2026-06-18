@@ -13,7 +13,6 @@
 # limitations under the License.
 """Head model configuration for classifier SavedModels."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import os

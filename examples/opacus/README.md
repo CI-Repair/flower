@@ -1,8 +1,6 @@
----
-tags: [DP, DP-SGD, basic, vision, fds, privacy]
-dataset: [CIFAR-10]
-framework: [opacus, torch]
----
+______________________________________________________________________
+
+## tags: \[DP, DP-SGD, basic, vision, fds, privacy\] dataset: \[CIFAR-10\] framework: \[opacus, torch\]
 
 # Training with Sample-Level Differential Privacy using Opacus Privacy Engine
 

@@ -1,8 +1,6 @@
----
-tags: [quickstart, linear regression]
-dataset: [Synthetic]
-framework: [JAX, FLAX]
----
+______________________________________________________________________
+
+## tags: \[quickstart, linear regression\] dataset: \[Synthetic\] framework: \[JAX, FLAX\]
 
 # Federated Learning with JAX and Flower (Quickstart Example)
 

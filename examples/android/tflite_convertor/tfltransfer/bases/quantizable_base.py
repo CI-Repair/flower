@@ -13,7 +13,6 @@
 # limitations under the License.
 """Base model abstract base class that handles quantization."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import abc
