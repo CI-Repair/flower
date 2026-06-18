@@ -1,9 +1,13 @@
-:og:description: Customize federated learning in Flower with built-in strategies, callbacks, and custom server-side implementations for maximum flexibility and control.
+:og:description: Customize federated learning in Flower with built-in strategies,
+    callbacks, and custom server-side implementations for maximum flexibility and
+    control.
+
 .. meta::
     :description: Customize federated learning in Flower with built-in strategies, callbacks, and custom server-side implementations for maximum flexibility and control.
 
-Use strategies
-==============
+################
+ Use strategies
+################
 
 Flower allows full customization of the learning process through the ``Strategy``
 abstraction. A number of built-in strategies are provided in the core framework.
@@ -15,8 +19,9 @@ the server side:
 - Customize an existing strategy with callback functions
 - Implement a novel strategy
 
-Use an existing strategy
-------------------------
+**************************
+ Use an existing strategy
+**************************
 
 Flower comes with a number of popular federated learning Strategies which can be
 instantiated as follows:
@@ -66,15 +71,16 @@ To access these values, use ``context.run_config``.
 
     # ...
 
-Customize an existing strategy with callback functions
-------------------------------------------------------
+********************************************************
+ Customize an existing strategy with callback functions
+********************************************************
 
 Existing strategies provide several ways to customize their behavior. Callback functions
 allow strategies to call user-provided code during execution. This approach enables you
 to modify the strategy's partial behavior without rewriting the whole class from zero.
 
 Configuring client fit and client evaluate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================================
 
 The server can pass new configuration values to the client each round by providing a
 function to ``on_fit_config_fn``. The provided function will be called by the strategy
@@ -134,13 +140,14 @@ Similar to ``on_fit_config_fn``, there is also ``on_evaluate_config_fn`` to cust
 the configuration sent to ``client.evaluate()``
 
 Configuring server-side evaluation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==================================
 
 Server-side evaluation can be enabled by passing an evaluation function to
 ``evaluate_fn``.
 
-Implement a novel strategy
---------------------------
+****************************
+ Implement a novel strategy
+****************************
 
 Writing a fully custom strategy is a bit more involved, but it provides the most
 flexibility. Read the `Implementing Strategies <how-to-implement-strategies.html>`_

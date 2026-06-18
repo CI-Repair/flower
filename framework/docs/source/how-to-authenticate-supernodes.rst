@@ -1,9 +1,12 @@
-:og:description: Enable authentication for SuperNodes and SuperLink in Flower with public key authentication, securing federated learning via TLS connections.
+:og:description: Enable authentication for SuperNodes and SuperLink in Flower with
+    public key authentication, securing federated learning via TLS connections.
+
 .. meta::
     :description: Enable authentication for SuperNodes and SuperLink in Flower with public key authentication, securing federated learning via TLS connections.
 
-Authenticate SuperNodes
-=======================
+#########################
+ Authenticate SuperNodes
+#########################
 
 When running a Flower Federation (see :doc:`ref-flower-network-communication`) it is
 fundamental that an authentication mechanism is available between the SuperLink and the
@@ -46,8 +49,9 @@ node's identity and is only available when encrypted connections (SSL/TLS) are e
 
     This guide covers a preview feature that might change in future versions of Flower.
 
-Generate authentication keys
-----------------------------
+******************************
+ Generate authentication keys
+******************************
 
 To establish an authentication mechanism by which only authorized SuperNodes can connect
 to a running SuperLink, a set of key pairs for both SuperLink and SuperNodes need to be
@@ -68,8 +72,9 @@ This will generate the keys in a new ``keys/`` directory. By default it creates 
 pair for the SuperLink and one for each SuperNode. Copy this directory into the
 directory of your app (e.g. a directory generated earlier via ``flwr new``).
 
-Enable node authentication in SuperLink
----------------------------------------
+*****************************************
+ Enable node authentication in SuperLink
+*****************************************
 
 To launch a SuperLink with SuperNode authentication enabled, you need to provide three
 aditional files in addition to the certificates needed for the TLS connections. Recall
@@ -88,8 +93,9 @@ that the authentication feature can only be enabled in the presence of TLS.
 
     * ``--auth-list-public-keys``: Specify the path to a CSV file storing the public keys of all SuperNodes that should be allowed to connect with the SuperLink. A valid CSV file storing known node public keys should list the keys in OpenSSH format, separated by commas. Refer to the code sample, which contains a CSV file with two known node public keys.
 
-Enable node authentication in SuperNode
----------------------------------------
+*****************************************
+ Enable node authentication in SuperNode
+*****************************************
 
 Connecting a SuperNode to a SuperLink that has node authentication enabled requires
 passing two additional arguments (i.e. the public and private keys of the SuperNode) in
@@ -125,8 +131,9 @@ key pair:
         --auth-supernode-private-key keys/client_credentials_2 \
         --auth-supernode-public-key keys/client_credentials_2.pub
 
-Security notice
----------------
+*****************
+ Security notice
+*****************
 
 The system's security relies on the credentials of the SuperLink and each SuperNode.
 Therefore, it is imperative to safeguard and safely store the credentials to avoid
@@ -134,8 +141,9 @@ security risks such as Public Key Infrastructure (PKI) impersonation attacks. Th
 authentication mechanism also involves human interaction, so please ensure that all of
 the communication is done in a secure manner, using trusted communication methods.
 
-Conclusion
-----------
+************
+ Conclusion
+************
 
 You should now have learned how to start a long-running Flower SuperLink and SuperNode
 with node authentication enabled. You should also know the significance of the private

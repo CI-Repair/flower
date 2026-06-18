@@ -1,9 +1,13 @@
-:og:description: Deploy Flower's SuperLink Helm chart to set up federated learning servers. Default config mirrors official releases, enabling seamless deployment, evaluation.
+:og:description: Deploy Flower's SuperLink Helm chart to set up federated learning
+    servers. Default config mirrors official releases, enabling seamless deployment,
+    evaluation.
+
 .. meta::
     :description: Deploy Flower's SuperLink Helm chart to set up federated learning servers. Default config mirrors official releases, enabling seamless deployment, evaluation.
 
-Deploy SuperLink using Helm
-===========================
+#############################
+ Deploy SuperLink using Helm
+#############################
 
 .. note::
 
@@ -20,8 +24,9 @@ specifically setting up the SuperLink.
 The default installation configuration aims to replicate the functionality and setup of
 the provided Flower Framework releases.
 
-Disable the SuperLink component
--------------------------------
+*********************************
+ Disable the SuperLink component
+*********************************
 
 .. code-block:: yaml
 
@@ -29,8 +34,9 @@ Disable the SuperLink component
       name: superlink
       enabled: false
 
-Enable the ServerApp component
-------------------------------
+********************************
+ Enable the ServerApp component
+********************************
 
 .. code-block:: yaml
 
@@ -38,8 +44,9 @@ Enable the ServerApp component
       name: serverapp
       enabled: true
 
-Run simulations in Kubernetes using the Simulation Plugin
----------------------------------------------------------
+***********************************************************
+ Run simulations in Kubernetes using the Simulation Plugin
+***********************************************************
 
 For more details, visit: `Run simulations
 <https://flower.ai/docs/framework/how-to-run-simulations.html#run-simulations>`__ guide
@@ -54,8 +61,9 @@ For more details, visit: `Run simulations
           num-supernodes: 2
           [...]
 
-Change Log Verbosity Level
---------------------------
+****************************
+ Change Log Verbosity Level
+****************************
 
 The log verbosity level in Flower can be adjusted using the ``FLWR_LOG_LEVEL``
 environment variable. This helps control the level of detail included in logs, making
@@ -89,8 +97,9 @@ specify it under the respective service section:
 For more details on logging configuration, visit: `Flower Logging Documentation
 <https://flower.ai/docs/framework/how-to-configure-logging.html>`__
 
-Enable User Authentication
---------------------------
+****************************
+ Enable User Authentication
+****************************
 
 User authentication can be enabled if you’re using the Flower Enterprise Edition (EE)
 Docker images. This is configured in the ``global.userAuth`` section of your
@@ -262,8 +271,9 @@ configuration or directly within your existing secret, depending on your setup. 
       relation: has_access
       object: service:<your_grid_name>
 
-Change Isolation Mode
----------------------
+***********************
+ Change Isolation Mode
+***********************
 
 The isolation mode determines how the SuperLink manages the ServerApp process execution.
 This setting can be adjusted using the ``superlink.isolationMode`` parameter:
@@ -280,8 +290,9 @@ This setting can be adjusted using the ``superlink.isolationMode`` parameter:
     serverapp:
       enabled: true
 
-Deploy Flower Framework with TLS
---------------------------------
+**********************************
+ Deploy Flower Framework with TLS
+**********************************
 
 To ensure TLS communication within the Flower Framework, you need to configure your
 deployment with proper TLS certificates.
@@ -294,7 +305,7 @@ deployment with proper TLS certificates.
       enabled: true
 
 Override certificate paths
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================
 
 By default, the TLS-related flags use the following paths when TLS is enabled:
 
@@ -317,8 +328,9 @@ These paths can be overridden by specifying the flags in the extraArgs, as shown
         - --ssl-keyfile
         - /mount/cert/tls.key
 
-Deploy Flower Framework without TLS
------------------------------------
+*************************************
+ Deploy Flower Framework without TLS
+*************************************
 
 For testing or internal use, you might want to deploy Flower without TLS. Be cautious as
 this exposes your deployment to potential security risks.
@@ -332,8 +344,9 @@ Example configuration for insecure deployment:
     superlink:
       enabled: true
 
-Pre-provide TLS Certificate
----------------------------
+*****************************
+ Pre-provide TLS Certificate
+*****************************
 
 If certificate creation is disabled, you must provide a pre-existing secret of type
 ``kubernetes.io/tls`` named ``<flower-server.fullname>-server-tls``.
@@ -343,11 +356,12 @@ If certificate creation is disabled, you must provide a pre-existing secret of t
     certificate:
       enabled: false
 
-Ingress Configuration
----------------------
+***********************
+ Ingress Configuration
+***********************
 
 SSL-Passthrough
-~~~~~~~~~~~~~~~
+===============
 
 When the ``tls`` option is set to ``true``, it expects the existence of the
 ``<flower-server.fullname>-server-tls`` secret. Flower Framework components will load
@@ -421,8 +435,9 @@ to add an additional host, as shown below:
             path: /
             port: 9092
 
-Enable Node Authentication
---------------------------
+****************************
+ Enable Node Authentication
+****************************
 
 .. code-block:: yaml
 

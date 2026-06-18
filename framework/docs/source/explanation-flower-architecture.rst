@@ -1,9 +1,13 @@
-:og:description: Learn about the architecture of a deployed Flower federated learning system, including SuperLink, SuperNodes, multi-tenancy, and the role of SuperExec for managing concurrent training runs.
+:og:description: Learn about the architecture of a deployed Flower federated learning
+    system, including SuperLink, SuperNodes, multi-tenancy, and the role of SuperExec
+    for managing concurrent training runs.
+
 .. meta::
     :description: Learn about the architecture of a deployed Flower federated learning system, including SuperLink, SuperNodes, multi-tenancy, and the role of SuperExec for managing concurrent training runs.
 
-Flower Architecture
-===================
+#####################
+ Flower Architecture
+#####################
 
 This page explains the architecture of deployed Flower federated learning system.
 

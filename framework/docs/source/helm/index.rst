@@ -1,9 +1,11 @@
 :og:description: Learn how to run Flower for federated learning using Helm charts.
+
 .. meta::
     :description: Learn how to run Flower for federated learning using Helm charts.
 
-Run Flower using Helm
-=====================
+#######################
+ Run Flower using Helm
+#######################
 
 .. note::
 
@@ -33,8 +35,9 @@ Then to tear down the deployment, run the |helm_uninstall_link|_ command:
     # Uninstall the `flower-supernode` release
     $ helm uninstall flower-supernode
 
-Running in Production
----------------------
+***********************
+ Running in Production
+***********************
 
 .. toctree::
     :maxdepth: 1

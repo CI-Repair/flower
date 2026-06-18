@@ -1,8 +1,10 @@
-[301] SUPERNODE_NODE_AUTH_KEYS_REQUIRED
-=======================================
+#########################################
+ [301] SUPERNODE_NODE_AUTH_KEYS_REQUIRED
+#########################################
 
-Description
------------
+*************
+ Description
+*************
 
 To run the SuperNode with authentication, file paths for both the private and public
 keys must be provided. Specifically, the following options must be specified:
@@ -12,8 +14,9 @@ keys must be provided. Specifically, the following options must be specified:
 
 Providing only one of these options is insufficient for authentication.
 
-How to Resolve
---------------
+****************
+ How to Resolve
+****************
 
 1. Ensure that the paths to both the private key and public key files are specified in
 command-line arguments. For example:

@@ -1,15 +1,19 @@
-:og:description: Save and load model checkpoints in Flower with custom strategies, including PyTorch checkpoints, for efficient federated learning workflows.
+:og:description: Save and load model checkpoints in Flower with custom strategies,
+    including PyTorch checkpoints, for efficient federated learning workflows.
+
 .. meta::
     :description: Save and load model checkpoints in Flower with custom strategies, including PyTorch checkpoints, for efficient federated learning workflows.
 
-Save and Load Model Checkpoints
-===============================
+#################################
+ Save and Load Model Checkpoints
+#################################
 
 Flower does not automatically save model updates on the server-side. This how-to guide
 describes the steps to save (and load) model checkpoints in Flower.
 
-Model Checkpointing
--------------------
+*********************
+ Model Checkpointing
+*********************
 
 Model updates can be persisted on the server-side by customizing ``Strategy`` methods.
 Implementing custom strategies is always an option, but for many cases it may be more
@@ -58,8 +62,9 @@ returns those aggregated weights to the caller (i.e., the server):
 
     app = ServerApp(server_fn=server_fn)
 
-Save and Load PyTorch Checkpoints
----------------------------------
+***********************************
+ Save and Load PyTorch Checkpoints
+***********************************
 
 Similar to the previous example but with a few extra steps, we'll show how to store a
 PyTorch checkpoint we'll use the ``torch.save`` function. Firstly, ``aggregate_fit``

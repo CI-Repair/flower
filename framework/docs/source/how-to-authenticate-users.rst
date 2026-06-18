@@ -1,9 +1,12 @@
-:og:description: Configure SuperLink for user authentication and authorization. Private-by-default runs securely with OpenID Connect and OpenFGA.
+:og:description: Configure SuperLink for user authentication and authorization.
+    Private-by-default runs securely with OpenID Connect and OpenFGA.
+
 .. meta::
     :description: Configure SuperLink for user authentication and authorization. Private-by-default runs securely with OpenID Connect and OpenFGA.
 
-Authenticate Users via OpenID Connect
-=====================================
+#######################################
+ Authenticate Users via OpenID Connect
+#######################################
 
 .. note::
 
@@ -22,8 +25,9 @@ SuperLink.
     runs are **private by default**, ensuring that only authorized users can access
     them.
 
-Prerequisites
--------------
+***************
+ Prerequisites
+***************
 
 To enable user authentication and authorization, the SuperLink must be deployed with an
 `OpenID Connect (OIDC) <https://openid.net/developers/how-connect-works/>`_ provider and
@@ -34,7 +38,7 @@ granted the necessary permissions by the SuperLink administrator. When enabled, 
 user authentication and authorization must be configured on the SuperLink.
 
 Enable User Authentication and Authorization on the SuperLink
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=============================================================
 
 Create a YAML configuration file with the following content:
 
@@ -74,8 +78,9 @@ Save this file as ``user-auth-config.yaml``. Then pass it to the SuperLink via t
     To authorize a user, the SuperLink administrator must add the user's OIDC ``sub``
     claim to the OpenFGA store with the appropriate relation.
 
-Login to the SuperLink
-----------------------
+************************
+ Login to the SuperLink
+************************
 
 Once a SuperLink with user authentication and authorization is up and running, a user
 can interface with it after installing the ``flwr`` PyPI package via the Flower CLI.
@@ -116,8 +121,9 @@ SuperLink will be saved to the app's directory under
 sent transparently with each subsequent ``flwr`` CLI request to the SuperLink, and it
 will relay them to OIDC provider to perform the authentication checks.
 
-Run authorized ``flwr`` CLI commands
-------------------------------------
+**************************************
+ Run authorized ``flwr`` CLI commands
+**************************************
 
 With the above steps completed, you can now run ``flwr`` CLI commands against a
 SuperLink setup with user authentication and authorization. For example, as an

@@ -1,9 +1,13 @@
-:og:description: Deploy Flower's SuperNode Helm chart to install client federated learning components. Default config mirrors official releases for seamless integration.
+:og:description: Deploy Flower's SuperNode Helm chart to install client federated
+    learning components. Default config mirrors official releases for seamless
+    integration.
+
 .. meta::
     :description: Deploy Flower's SuperNode Helm chart to install client federated learning components. Default config mirrors official releases for seamless integration.
 
-Deploy SuperNode using Helm
-===========================
+#############################
+ Deploy SuperNode using Helm
+#############################
 
 .. note::
 
@@ -20,8 +24,9 @@ specifically setting up the SuperNode.
 The default installation configuration aims to replicate the functionality and setup of
 the provided Flower Framework releases.
 
-Multi Project Setup
--------------------
+*********************
+ Multi Project Setup
+*********************
 
 To install multiple types of SuperNodes, such as a federation for running PyTorch and
 another for TensorFlow, you need to install the Helm Chart multiple times with different
@@ -80,7 +85,7 @@ Install this configuration using the following command:
 This will deploy 3 SuperNodes named ``tensorflow-flower-client-supernode-<random>``.
 
 Deploy Flower Framework with TLS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================
 
 To ensure TLS communication within the Flower framework, you need to configure your
 deployment with proper TLS certificates.
@@ -95,8 +100,9 @@ Example configuration for TLS deployment:
     global:
       insecure: false
 
-Deploy Flower Framework without TLS
------------------------------------
+*************************************
+ Deploy Flower Framework without TLS
+*************************************
 
 For testing or internal use, you might want to deploy Flower without TLS. Be cautious as
 this exposes your deployment to potential security risks.
@@ -108,8 +114,9 @@ Example configuration for insecure deployment:
     global:
       insecure: true
 
-Node Authentication
--------------------
+*********************
+ Node Authentication
+*********************
 
 To enable Node Authentication, you need to specify a private key in either PKCS8 or
 OpenSSH (PEM-like) format. This example assumes that the SuperLink is also configured
@@ -139,11 +146,12 @@ this SuperNode.
         address: my-supernode.example.com
         port: 443
 
-Isolated Setup
---------------
+****************
+ Isolated Setup
+****************
 
 Isolation All-in-One
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 To install SuperNode in isolation mode using the “process” configuration, both the
 ClientApp and SuperNode need to be enabled. By default, the ClientApp connects to the
@@ -164,7 +172,7 @@ setup assumes that both components are running within the same cluster.
     [...]
 
 Isolation Distributed
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 You can also deploy the SuperNode and ClientApp separately. To do this, you need to
 deploy the chart twice: once with ``supernode.enabled=true`` and once with
@@ -190,8 +198,9 @@ ClientApp native installations.
         port: 443
     [...]
 
-Node Configuration
-------------------
+********************
+ Node Configuration
+********************
 
 You can add a node configuration to configure a SuperNode. The YAML datatype is
 preserved when passing it in the Python application:

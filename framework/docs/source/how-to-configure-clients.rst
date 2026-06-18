@@ -1,16 +1,20 @@
-:og:description: Configure Flower clients by sending parameters from the server to control client-side hyperparameters using configuration dictionaries and strategies.
+:og:description: Configure Flower clients by sending parameters from the server to
+    control client-side hyperparameters using configuration dictionaries and strategies.
+
 .. meta::
     :description: Configure Flower clients by sending parameters from the server to control client-side hyperparameters using configuration dictionaries and strategies.
 
-Configure Clients
-=================
+###################
+ Configure Clients
+###################
 
 Flower provides the ability to send configuration values to clients, allowing
 server-side control over client behavior. This feature enables flexible and dynamic
 adjustment of client-side hyperparameters, improving collaboration and experimentation.
 
-Configuration values
---------------------
+**********************
+ Configuration values
+**********************
 
 ``FitConfig`` and ``EvaluateConfig`` are dictionaries containing configuration values
 that the server sends to clients during federated learning rounds. These values must be
@@ -51,8 +55,9 @@ deserializes them back to Python dictionaries.
         # On the client
         data_splits = json.loads(config["data_splits"])
 
-Configuration through Built-in Strategies
------------------------------------------
+*******************************************
+ Configuration through Built-in Strategies
+*******************************************
 
 Flower provides configuration options to control client behavior dynamically through
 ``FitConfig`` and ``EvaluateConfig``. These configurations allow server-side control
@@ -60,7 +65,7 @@ over client-side parameters such as batch size, number of local epochs, learning
 and evaluation settings, improving collaboration and experimentation.
 
 ``FitConfig`` and ``EvaluateConfig``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================
 
 ``FitConfig`` and ``EvaluateConfig`` are dictionaries containing configuration values
 that the server sends to clients during federated learning rounds. These dictionaries
@@ -68,7 +73,7 @@ enable the server to adjust client-side hyperparameters and monitor progress
 effectively.
 
 ``FitConfig``
-+++++++++++++
+-------------
 
 ``FitConfig`` specifies the hyperparameters for training rounds, such as the batch size,
 number of local epochs, and other parameters that influence training.
@@ -125,7 +130,7 @@ read and used:
             # Training logic here
 
 ``EvaluateConfig``
-++++++++++++++++++
+------------------
 
 ``EvaluateConfig`` specifies hyperparameters for the evaluation process, such as the
 batch size, evaluation frequency, or metrics to compute during evaluation.
@@ -176,7 +181,7 @@ can be used during the evaluation process:
             return 0.5, {"accuracy": 0.85}  # Example return values
 
 Example: Sending Training Configurations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+========================================
 
 Imagine we want to send (a) the batch size, (b) the current global round, and (c) the
 number of local epochs. Our configuration function could look like this:
@@ -212,7 +217,7 @@ constructor (typically in your ``server_fn``):
     app = ServerApp(server_fn=server_fn)
 
 Client-Side Configuration
-+++++++++++++++++++++++++
+-------------------------
 
 On the client side, configurations are received as input to the ``fit`` and ``evaluate``
 methods. For example:
@@ -231,7 +236,7 @@ methods. For example:
             pass
 
 Dynamic Configurations per Round
-++++++++++++++++++++++++++++++++
+--------------------------------
 
 Configuration functions are called at the beginning of every round. This allows for
 dynamic adjustments based on progress. For example, you can increase the number of local
@@ -247,15 +252,16 @@ epochs in later rounds:
             "local_epochs": 1 if server_round < 3 else 2,
         }
 
-Customizing Client Configurations
----------------------------------
+***********************************
+ Customizing Client Configurations
+***********************************
 
 In some cases, it may be necessary to send different configurations to individual
 clients. To achieve this, you can create a custom strategy by extending a built-in one,
 such as ``FedAvg``:
 
 Example: Client-Specific Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================
 
 .. code-block:: python
 
@@ -287,8 +293,9 @@ Next, use this custom strategy as usual:
 
     app = ServerApp(server_fn=server_fn)
 
-Summary of Enhancements
------------------------
+*************************
+ Summary of Enhancements
+*************************
 
 - **Dynamic Configurations**: Enables per-round adjustments via functions.
 - **Advanced Customization**: Supports client-specific strategies.
