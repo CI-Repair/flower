@@ -232,6 +232,8 @@ convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
 "py/flwr/server/strategy/*.py" = ["E501"]
+"py/flwr/common/serde_test.py" = ["E721"]
+"py/flwr/server/compat/grid_client_proxy_test.py" = ["B017"]
 
 [tool.docsig]
 ignore-no-params = true

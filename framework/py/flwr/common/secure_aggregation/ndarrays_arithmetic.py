@@ -18,7 +18,11 @@
 from typing import Any, Union
 
 import numpy as np
-from numpy.typing import DTypeLike, NDArray
+<<<<<<< ours
+from numpy import dtype
+=======
+>>>>>>> theirs
+from numpy.typing import NDArray
 
 
 def factor_combine(factor: int, parameters: list[NDArray[Any]]) -> list[NDArray[Any]]:
@@ -39,9 +43,15 @@ def get_parameters_shape(parameters: list[NDArray[Any]]) -> list[tuple[int, ...]
 
 
 def get_zero_parameters(
-    dimensions_list: list[tuple[int, ...]], dtype: DTypeLike = np.int64
+<<<<<<< ours
+    dimensions_list: list[tuple[int, ...]], dtype: np.dtype[Any] = np.dtype(np.int64)
+=======
+    dimensions_list: list[tuple[int, ...]], dtype: np.dtype[Any] | None = None
+>>>>>>> theirs
 ) -> list[NDArray[Any]]:
     """Generate zero parameters based on the dimensions list."""
+    if dtype is None:
+        dtype = np.dtype(np.int64)
     return [np.zeros(dimensions, dtype=dtype) for dimensions in dimensions_list]
 
 

@@ -45,8 +45,8 @@ Response = Union[
 ]
 
 
-shared_account_info: contextvars.ContextVar[AccountInfo] = contextvars.ContextVar(
-    "account_info", default=AccountInfo(flwr_aid=None, account_name=None)
+shared_account_info: contextvars.ContextVar[AccountInfo | None] = (
+    contextvars.ContextVar("account_info", default=None)
 )
 
 
