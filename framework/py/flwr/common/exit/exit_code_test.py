@@ -44,9 +44,15 @@ def test_exit_code_help_url_exist() -> None:
         # Assert file exists
         assert code in files, f"Exit code {name} ({code}) does not have help URL."
 
-        # Retrieve the title from the help URL
+        # Retrieve the title from the help URL.
+        # Some generated RST files use an underline before the title line,
+        # so find the first non-underline line that contains the code title.
         f = files[code]
-        title = f.read_text().split("\n")[0]
+        lines = [line.strip() for line in f.read_text().splitlines() if line.strip()]
+        title = next(
+            (line for line in lines if line.startswith(f"[{code}] ")),
+            "",
+        )
 
         # Assert the title is correct
         assert (
