@@ -38,6 +38,7 @@ from flwr.common.constant import (
     Status,
     SubStatus,
 )
+from flwr.common.context import Context
 from flwr.common.exit import ExitCode, flwr_exit
 from flwr.common.heartbeat import HeartbeatSender, get_grpc_app_heartbeat_fn
 from flwr.common.logger import (
@@ -116,6 +117,7 @@ def run_serverapp(  # pylint: disable=R0914, disable=W0212, disable=R0915
     run_status = None
     heartbeat_sender = None
     grid = None
+    context: Context | None = None
     while True:
 
         try:
