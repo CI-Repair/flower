@@ -45,8 +45,8 @@ Response = Union[
 ]
 
 
-shared_user_info: contextvars.ContextVar[UserInfo] = contextvars.ContextVar(
-    "user_info", default=UserInfo(user_id=None, user_name=None)
+shared_user_info: contextvars.ContextVar[UserInfo | None] = contextvars.ContextVar(
+    "user_info", default=None
 )
 
 

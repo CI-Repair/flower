@@ -14,7 +14,6 @@
 # ==============================================================================
 """RecordDict tests."""
 
-
 import json
 import pickle
 from collections import OrderedDict

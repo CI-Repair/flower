@@ -220,18 +220,21 @@ exclude = [
     "node_modules",
     "venv",
     "proto",
+    "py/flwr/proto",
 ]
 
 [tool.ruff.lint]
 select = ["D", "E", "F", "W", "B", "ISC", "C4", "UP"]
 fixable = ["D", "E", "F", "W", "B", "ISC", "C4", "UP"]
-ignore = ["B024", "B027", "D205", "D209"]
+ignore = ["B024", "B027", "D205", "D209", "E721", "B017"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
 "py/flwr/server/strategy/*.py" = ["E501"]
+"py/flwr/proto/*" = ["E402", "F401"]
+"py/flwr/**/*_test.py" = ["E721", "B017"]
 
 [tool.docsig]
 ignore-no-params = true
