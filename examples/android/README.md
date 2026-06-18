@@ -1,8 +1,6 @@
----
-tags: [mobile, vision, sdk]
-dataset: [CIFAR-10]
-framework: [Android, Java, TensorFlowLite]
----
+______________________________________________________________________
+
+## tags: \[mobile, vision, sdk\] dataset: \[CIFAR-10\] framework: \[Android, Java, TensorFlowLite\]
 
 # Flower Android Example (TensorFlowLite)
 

@@ -1,8 +1,6 @@
----
-tags: [advanced, classification, tabular]
-dataset: [HIGGS]
-framework: [xgboost]
----
+______________________________________________________________________
+
+## tags: \[advanced, classification, tabular\] dataset: \[HIGGS\] framework: \[xgboost\]
 
 # Federated Learning with XGBoost and Flower (Comprehensive Example)
 

@@ -1,8 +1,6 @@
----
-tags: [quickstart, tabular, federated analytics]
-dataset: [Iris]
-framework: [pandas]
----
+______________________________________________________________________
+
+## tags: \[quickstart, tabular, federated analytics\] dataset: \[Iris\] framework: \[pandas\]
 
 # Federated Learning with Pandas and Flower (Quickstart Example)
 

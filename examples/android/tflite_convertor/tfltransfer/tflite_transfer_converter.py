@@ -18,7 +18,6 @@ convert a pair of models representing fixed base and trainable head models to a 
 TFLite models, which can be then used by the transfer learning library.
 """
 
-
 from __future__ import absolute_import, division, print_function
 
 import os

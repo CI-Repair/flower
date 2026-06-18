@@ -16,7 +16,6 @@
 Converts a pair of TF models to a TFLite transfer learning model.
 """
 
-
 from __future__ import absolute_import, division, print_function
 
 import argparse

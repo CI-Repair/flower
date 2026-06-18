@@ -1,8 +1,6 @@
----
-tags: [DP, DP-SGD, basic, vision, fds, privacy]
-dataset: [MNIST]
-framework: [tensorflow]
----
+______________________________________________________________________
+
+## tags: \[DP, DP-SGD, basic, vision, fds, privacy\] dataset: \[MNIST\] framework: \[tensorflow\]
 
 # Training with Sample-Level Differential Privacy using TensorFlow-Privacy Engine
 

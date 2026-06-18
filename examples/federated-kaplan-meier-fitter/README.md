@@ -1,8 +1,6 @@
----
-tags: [estimator, medical]
-dataset: [Waltons]
-framework: [lifelines]
----
+______________________________________________________________________
+
+## tags: \[estimator, medical\] dataset: \[Waltons\] framework: \[lifelines\]
 
 # Federated Survival Analysis with Flower and KaplanMeierFitter
 

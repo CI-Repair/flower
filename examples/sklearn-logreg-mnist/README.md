@@ -1,8 +1,6 @@
----
-tags: [basic, vision, logistic regression, fds]
-dataset: [MNIST]
-framework: [scikit-learn]
----
+______________________________________________________________________
+
+## tags: \[basic, vision, logistic regression, fds\] dataset: \[MNIST\] framework: \[scikit-learn\]
 
 # Flower Logistic Regression Example using scikit-learn and Flower (Quickstart Example)
 

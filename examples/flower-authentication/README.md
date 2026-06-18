@@ -1,8 +1,6 @@
----
-tags: [advanced, vision, fds]
-dataset: [CIFAR-10]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[advanced, vision, fds\] dataset: \[CIFAR-10\] framework: \[torch, torchvision\]
 
 # Flower Federations with Authentication 🧪
 

@@ -1,8 +1,6 @@
----
-tags: [basic, vision, embedded]
-dataset: [Fashion-MNIST]
-framework: [torch]
----
+______________________________________________________________________
+
+## tags: \[basic, vision, embedded\] dataset: \[Fashion-MNIST\] framework: \[torch\]
 
 # Federated AI with Embedded Devices using Flower
 

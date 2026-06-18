@@ -1,8 +1,6 @@
----
-tags: [quickstart, vision, fds]
-dataset: [MNIST]
-framework: [lightning]
----
+______________________________________________________________________
+
+## tags: \[quickstart, vision, fds\] dataset: \[MNIST\] framework: \[lightning\]
 
 # Federated Learning with PyTorch Lightning and Flower (Quickstart Example)
 

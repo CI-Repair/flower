@@ -26,7 +26,6 @@ from .lerobot_federated_dataset import FilteredLeRobotDataset
 from flwr_datasets import FederatedDataset
 from flwr_datasets.partitioner import GroupedNaturalIdPartitioner
 
-
 disable_progress_bar()
 fds = None  # Cache FederatedDataset
 
