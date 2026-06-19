@@ -2,8 +2,9 @@
 .. meta::
     :description: A step-by-step guide to learn how to create, deploy and run a Flower app on the Google Cloud Platform (GCP) using the Google Kubernetes Engine (GKE).
 
-Run Flower on GCP
-=================
+###################
+ Run Flower on GCP
+###################
 
 A step-by-step guide to learn how to create, deploy and run a Flower app on the `Google
 Cloud Platform (GCP) <https://console.cloud.google.com>`_ using the `Google Kubernetes
@@ -27,8 +28,9 @@ Security Engineer at Google Cloud.
     :align: center
     :width: 70%
 
-Create a Kubernetes Cluster
----------------------------
+*****************************
+ Create a Kubernetes Cluster
+*****************************
 
 Here, we outline the steps to create a Kubernetes cluster in GCP through the GCP user
 interface. Before proceeding, please make sure you have an account on GCP.
@@ -61,8 +63,9 @@ interface. Before proceeding, please make sure you have an account on GCP.
 
     Please wait for a couple of minutes until the cluster is ready and fully deployed.
 
-Configure Google Cloud SDK
---------------------------
+****************************
+ Configure Google Cloud SDK
+****************************
 
 To interact with our newly deployed Kubernetes cluster, we will use the Google Cloud SDK
 and configure it locally. This SDK allows us to directly interact with GCP and in turn
@@ -150,8 +153,9 @@ following command:
     `official quick-reference guide
     <https://kubernetes.io/docs/reference/kubectl/quick-reference/>`_.
 
-Create a Google Artifact Registry
----------------------------------
+***********************************
+ Create a Google Artifact Registry
+***********************************
 
 The Google Cloud Artifact Registry is a fully managed, scalable, and private service for
 storing and managing software build artifacts and dependencies. Consequently, to run our
@@ -180,7 +184,7 @@ repository using the ``gcloud`` CLI:
     gcloud auth configure-docker us-central1-docker.pkg.dev  # we use us-central1 as our region
 
 Registry Validation & Permissions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=================================
 
 The steps below validate that the Google Artifact Registry has been properly configured,
 you have correct access and you have writing permissions to push the docker images
@@ -201,8 +205,9 @@ accomplish this, please run the following command:
         --member="user:<YOUR_EMAIL@DOMAIN.COM>" \
         --role="roles/artifactregistry.writer"
 
-Configure Flower App Docker Images
-----------------------------------
+************************************
+ Configure Flower App Docker Images
+************************************
 
 In order to proceed with this next step, first, we create a local Flower app, and then
 create a dedicated Dockerfile for the ServerApp and the ClientApp Docker images. Once we
@@ -219,7 +224,7 @@ We create the Flower NumPy app as follows:
     flwr new flower-numpy-example --framework NumPy --username flower
 
 Create Docker Images
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 Once the app is created, we navigate inside the app directory (i.e., where the
 ``pyproject.toml`` file is) and create two ``Dockerfile``\s one for the ``ClientApp``
@@ -286,7 +291,7 @@ Once we have created the required Dockerfiles, we build the Docker Images as fol
     docker build --platform linux/amd64 -f clientapp.Dockerfile -t flower_numpy_example_clientapp:0.0.1 .
 
 Tag Docker Images
-~~~~~~~~~~~~~~~~~
+=================
 
 Before we are able to push our two newly locally created Docker images, we need to tag
 them with the Google Artifact Registry repository name and image name we created during
@@ -311,7 +316,7 @@ and ``ClientApp`` Docker images are:
     docker tag flower_numpy_example_clientapp:0.0.1 us-central1-docker.pkg.dev/<YOUR_PROJECT_ID>/flower-gcp-example-artifacts/flower_numpy_example_clientapp:0.0.1
 
 Push Docker Images
-~~~~~~~~~~~~~~~~~~
+==================
 
 Once our images are tagged correctly, you can push them to your ``Artifact Registry``
 repository using the ``docker push`` command with the tagged name:
@@ -328,8 +333,9 @@ repository using the ``docker push`` command with the tagged name:
     # please change <YOUR_PROJECT_ID> to point to your project identifier
     docker push us-central1-docker.pkg.dev/<YOUR_PROJECT_ID>/flower-gcp-example-artifacts/flower_numpy_example_clientapp:0.0.1
 
-Deploy Flower Infrastructure
-----------------------------
+******************************
+ Deploy Flower Infrastructure
+******************************
 
 Before running our Flower app, we first need to deploy our ``Pods`` on the Kubernetes
 cluster.
@@ -609,8 +615,9 @@ window that appears will show the status of the ``Pods`` under deployment.
     ``Pods`` are up and running. While ``Pods`` resources are being provisioned, some
     warnings are expected.
 
-Run Flower App
---------------
+****************
+ Run Flower App
+****************
 
 Once all ``Pods`` are up and running, we need to get the ``EXTERNAL_IP`` of the
 ``superlink-service`` and point our Flower app to use the Kubernetes cluster to submit
@@ -701,8 +708,9 @@ the logs from the run. The output should look like the one shared below.
     the value of the ``EXTERNAL_IP`` changes. In that case, you will have to update the
     ``pyproject.toml``.
 
-Shutdown Flower Infrastructure
-------------------------------
+********************************
+ Shutdown Flower Infrastructure
+********************************
 
 If you would like to shutdown all the running pods deployed during this guide, you can
 use the ``kubectl delete`` command and pass the the ``.yaml`` file of each pod, as also
