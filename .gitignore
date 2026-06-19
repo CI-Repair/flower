@@ -6,6 +6,7 @@ framework/docs/source/_build
 framework/docs/source/dataset/
 flwr_logs
 .cache
+.codex
 
 # Node.js
 node_modules

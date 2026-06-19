@@ -1,5 +1,4 @@
 :og:description: Learn how to run Flower for federated learning using Helm charts.
-
 .. meta::
     :description: Learn how to run Flower for federated learning using Helm charts.
 
