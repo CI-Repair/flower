@@ -1,6 +1,8 @@
-[602] COMMON_TLS_NOT_SUPPORTED
 ################################
+ [602] COMMON_TLS_NOT_SUPPORTED
 ################################
+
+----
 
 *************
  Description

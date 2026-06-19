@@ -1,6 +1,8 @@
-[2] GRACEFUL_EXIT_SIGQUIT
 ###########################
+ [2] GRACEFUL_EXIT_SIGQUIT
 ###########################
+
+----
 
 *************
  Description

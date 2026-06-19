@@ -1,6 +1,8 @@
-[600] COMMON_ADDRESS_INVALID
 ##############################
+ [600] COMMON_ADDRESS_INVALID
 ##############################
+
+----
 
 *************
  Description
