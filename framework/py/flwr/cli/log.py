@@ -157,6 +157,7 @@ def log(
         bool,
         typer.Option(
             "--stream/--show",
+            is_flag=True,
             help="Flag to stream or print logs from the Flower run",
         ),
     ] = True,
