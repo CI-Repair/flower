@@ -1,5 +1,4 @@
 :og:description: Configure the logging level for your Flower processes.
-
 .. meta::
     :description: Configure the logging level for your Flower processes.
 
