@@ -1,11 +1,14 @@
-:og:description: Learn how to train a logistic regression on MNIST using federated learning with Flower and scikit-learn in this step-by-step tutorial.
+:og:description: Learn how to train a logistic regression on MNIST using federated
+    learning with Flower and scikit-learn in this step-by-step tutorial.
+
 .. meta::
     :description: Learn how to train a logistic regression on MNIST using federated learning with Flower and scikit-learn in this step-by-step tutorial.
 
 .. _quickstart-scikitlearn:
 
-Quickstart scikit-learn
-=======================
+#########################
+ Quickstart scikit-learn
+#########################
 
 In this federated learning tutorial we will learn how to train a Logistic Regression on
 MNIST using Flower and scikit-learn. It is recommended to create a virtual environment
@@ -113,8 +116,9 @@ in ``pyproject.toml`` like this:
 What follows is an explanation of each component in the project you just created:
 dataset partition, the model, defining the ``ClientApp`` and defining the ``ServerApp``.
 
-The Data
---------
+**********
+ The Data
+**********
 
 This tutorial uses |flowerdatasets|_ to easily download and partition the `MNIST
 <https://huggingface.co/datasets/ylecun/mnist>`_ dataset. In this example you'll make
@@ -138,8 +142,9 @@ function to create dataloaders with the data that correspond to their data parti
     X_train, X_test = X[: int(0.8 * len(X))], X[int(0.8 * len(X)) :]
     y_train, y_test = y[: int(0.8 * len(y))], y[int(0.8 * len(y)) :]
 
-The Model
----------
+***********
+ The Model
+***********
 
 We define the |logisticregression|_ model from scikit-learn in the ``get_model()``
 function:
@@ -157,8 +162,9 @@ function:
 To perform the training and evaluation, we will make use of the ``.fit()`` and
 ``.score()`` methods available in the ``LogisticRegression`` class.
 
-The ClientApp
--------------
+***************
+ The ClientApp
+***************
 
 The main changes we have to make to use scikit-learn with Flower will be found in the
 ``get_model_params()``, ``set_model_params()``, and ``set_initial_params()`` functions.
@@ -255,8 +261,9 @@ additioinal hyperparameters in ``pyproject.toml`` and access them here.
     # Flower ClientApp
     app = ClientApp(client_fn)
 
-The ServerApp
--------------
+***************
+ The ServerApp
+***************
 
 To construct a ``ServerApp`` we define a ``server_fn()`` callback with an identical
 signature to that of ``client_fn()`` but the return type is |serverappcomponents|_ as

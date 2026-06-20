@@ -1,15 +1,19 @@
-:og:description: Aggregate custom evaluation results from federated clients in Flower using a strategy that applies weighted averaging for metrics like accuracy.
+:og:description: Aggregate custom evaluation results from federated clients in Flower
+    using a strategy that applies weighted averaging for metrics like accuracy.
+
 .. meta::
     :description: Aggregate custom evaluation results from federated clients in Flower using a strategy that applies weighted averaging for metrics like accuracy.
 
-Aggregate evaluation results
-============================
+##############################
+ Aggregate evaluation results
+##############################
 
 The Flower server does not prescribe a way to aggregate evaluation results, but it
 enables the user to fully customize result aggregation.
 
-Aggregate Custom Evaluation Results
------------------------------------
+*************************************
+ Aggregate Custom Evaluation Results
+*************************************
 
 The same ``Strategy``-customization approach can be used to aggregate custom evaluation
 results coming from individual clients. Clients can return custom metrics to the server

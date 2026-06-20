@@ -1,11 +1,14 @@
-:og:description: Learn how to train an MLP on MNIST using federated learning with Flower and MLX in this step-by-step tutorial.
+:og:description: Learn how to train an MLP on MNIST using federated learning with Flower
+    and MLX in this step-by-step tutorial.
+
 .. meta::
     :description: Learn how to train an MLP on MNIST using federated learning with Flower and MLX in this step-by-step tutorial.
 
 .. _quickstart-mlx:
 
-Quickstart MLX
-==============
+################
+ Quickstart MLX
+################
 
 In this federated learning tutorial we will learn how to train simple MLP on MNIST using
 Flower and MLX. It is recommended to create a virtual environment and run everything
@@ -114,8 +117,9 @@ the ``pyproject.toml`` like this:
 What follows is an explanation of each component in the project you just created:
 dataset partition, the model, defining the ``ClientApp`` and defining the ``ServerApp``.
 
-The Data
---------
+**********
+ The Data
+**********
 
 We will use `Flower Datasets <https://flower.ai/docs/datasets/>`_ to easily download and
 partition the `MNIST` dataset. In this example you'll make use of the `IidPartitioner
@@ -155,8 +159,9 @@ Flower Datasets:
 
     train_images, train_labels, test_images, test_labels = map(mx.array, data)
 
-The Model
----------
+***********
+ The Model
+***********
 
 We define the model as in the `centralized MLX example
 <https://github.com/ml-explore/mlx-examples/tree/main/mnist>`_, it's a simple MLP:
@@ -200,7 +205,7 @@ We also define some utility functions to test our model and to iterate over batc
             yield X[ids], y[ids]
 
 The ClientApp
-~~~~~~~~~~~~~
+=============
 
 The main changes we have to make to use `MLX` with `Flower` will be found in the
 ``get_params()`` and ``set_params()`` functions. Indeed, MLX doesn't provide an easy way
@@ -362,7 +367,7 @@ of epochs a ``ClientApp`` will perform when running the ``fit()`` method.
     app = ClientApp(client_fn)
 
 The ServerApp
-+++++++++++++
+-------------
 
 To construct a ``ServerApp``, we define a ``server_fn()`` callback with an identical
 signature to that of ``client_fn()``, but the return type is `ServerAppComponents

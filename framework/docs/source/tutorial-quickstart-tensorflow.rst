@@ -1,11 +1,14 @@
-:og:description: Learn how to train a Convolutional Neural Network on CIFAR-10 using federated learning with Flower and TensorFlow in this step-by-step tutorial.
+:og:description: Learn how to train a Convolutional Neural Network on CIFAR-10 using
+    federated learning with Flower and TensorFlow in this step-by-step tutorial.
+
 .. meta::
     :description: Learn how to train a Convolutional Neural Network on CIFAR-10 using federated learning with Flower and TensorFlow in this step-by-step tutorial.
 
 .. _quickstart-tensorflow:
 
-Quickstart TensorFlow
-=====================
+#######################
+ Quickstart TensorFlow
+#######################
 
 In this tutorial we will learn how to train a Convolutional Neural Network on CIFAR-10
 using the Flower framework and TensorFlow. First of all, it is recommended to create a
@@ -112,8 +115,9 @@ in ``pyproject.toml`` like this:
     # Override some arguments
     $ flwr run . --run-config "num-server-rounds=5 batch-size=16"
 
-The Data
---------
+**********
+ The Data
+**********
 
 This tutorial uses `Flower Datasets <https://flower.ai/docs/datasets/>`_ to easily
 download and partition the `CIFAR-10` dataset. In this example you'll make use of the
@@ -139,8 +143,9 @@ arrays that correspond to their data partition.
     x_train, y_train = partition["train"]["img"] / 255.0, partition["train"]["label"]
     x_test, y_test = partition["test"]["img"] / 255.0, partition["test"]["label"]
 
-The Model
----------
+***********
+ The Model
+***********
 
 Next, we need a model. We defined a simple Convolutional Neural Network (CNN), but feel
 free to replace it with a more sophisticated model if you'd like:
@@ -168,8 +173,9 @@ free to replace it with a more sophisticated model if you'd like:
         )
         return model
 
-The ClientApp
--------------
+***************
+ The ClientApp
+***************
 
 With `TensorFlow`, we can use the built-in ``get_weights()`` and ``set_weights()``
 functions, which simplifies the implementation with `Flower`. The rest of the
@@ -232,8 +238,9 @@ access them here.
     # Flower ClientApp
     app = ClientApp(client_fn=client_fn)
 
-The ServerApp
--------------
+***************
+ The ServerApp
+***************
 
 To construct a ``ServerApp`` we define a ``server_fn()`` callback with an identical
 signature to that of ``client_fn()`` but the return type is `ServerAppComponents
@@ -278,8 +285,9 @@ Congratulations! You've successfully built and run your first federated learning
 
 .. _quickstart_tf_link: https://github.com/adap/flower/blob/main/examples/quickstart-tensorflow
 
-Video tutorial
---------------
+****************
+ Video tutorial
+****************
 
 .. note::
 

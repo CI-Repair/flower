@@ -1,11 +1,14 @@
-:og:description: Learn how to train a linear regression using federated learning with Flower and JAX in this step-by-step tutorial.
+:og:description: Learn how to train a linear regression using federated learning with
+    Flower and JAX in this step-by-step tutorial.
+
 .. meta::
     :description: Learn how to train a linear regression using federated learning with Flower and JAX in this step-by-step tutorial.
 
 .. _quickstart-jax:
 
-Quickstart JAX
-==============
+################
+ Quickstart JAX
+################
 
 In this federated learning tutorial we will learn how to train a linear regression model
 using Flower and `JAX <https://jax.readthedocs.io/en/latest/>`_. It is recommended to
@@ -114,8 +117,9 @@ in ``pyproject.toml`` like this:
 What follows is an explanation of each component in the project you just created:
 dataset partition, the model, defining the ``ClientApp`` and defining the ``ServerApp``.
 
-The Data
---------
+**********
+ The Data
+**********
 
 This tutorial uses scikit-learn's |makeregression|_ function to generate a random
 regression problem.
@@ -128,8 +132,9 @@ regression problem.
         X, X_test, y, y_test = train_test_split(X, y)
         return X, y, X_test, y_test
 
-The Model
----------
+***********
+ The Model
+***********
 
 We defined a simple linear regression model to demonstrate how to create a JAX model,
 but feel free to replace it with a more sophisticated JAX model if you'd like, (such as
@@ -170,8 +175,9 @@ the above model.
         loss_test = jnp.mean(jnp.square(err_test))
         return loss_test, num_examples
 
-The ClientApp
--------------
+***************
+ The ClientApp
+***************
 
 The main changes we have to make to use JAX with Flower will be found in the
 ``get_params()`` and ``set_params()`` functions. In ``get_params()``, JAX model
@@ -246,8 +252,9 @@ additioinal hyperparameters in ``pyproject.toml`` and access them here.
     # Flower ClientApp
     app = ClientApp(client_fn)
 
-The ServerApp
--------------
+***************
+ The ServerApp
+***************
 
 To construct a ``ServerApp`` we define a ``server_fn()`` callback with an identical
 signature to that of ``client_fn()`` but the return type is |serverappcomponents|_ as

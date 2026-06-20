@@ -1,11 +1,14 @@
-:og:description: Learn how to train an autoencoder on MNIST using federated learning with Flower and PyTorch Lightning in this step-by-step tutorial.
+:og:description: Learn how to train an autoencoder on MNIST using federated learning
+    with Flower and PyTorch Lightning in this step-by-step tutorial.
+
 .. meta::
     :description: Learn how to train an autoencoder on MNIST using federated learning with Flower and PyTorch Lightning in this step-by-step tutorial.
 
 .. _quickstart-pytorch-lightning:
 
-Quickstart PyTorch Lightning
-============================
+##############################
+ Quickstart PyTorch Lightning
+##############################
 
 In this federated learning tutorial we will learn how to train an AutoEncoder model on
 MNIST using Flower and PyTorch Lightning. It is recommended to create a virtual
