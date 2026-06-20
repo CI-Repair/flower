@@ -39,7 +39,8 @@ def get_parameters_shape(parameters: list[NDArray[Any]]) -> list[tuple[int, ...]
 
 
 def get_zero_parameters(
-    dimensions_list: list[tuple[int, ...]], dtype: "type[np.generic[Any]]" = np.int64
+    dimensions_list: list[tuple[int, ...]],
+    dtype: "type[np.generic[Any]]" = np.int64,
 ) -> list[NDArray[Any]]:
     """Generate zero parameters based on the dimensions list."""
     return [np.zeros(dimensions, dtype=dtype) for dimensions in dimensions_list]
