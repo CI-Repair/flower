@@ -2,8 +2,9 @@
 .. meta::
     :description: The Flower Network Communication reference describes all mandatory and optional network connections in Flower federated AI systems.
 
-Flower Network Communication
-============================
+##############################
+ Flower Network Communication
+##############################
 
 This reference complements the `Flower Architecture
 <explanation-flower-architecture.html>`_ explanation by detailing the network
@@ -34,8 +35,9 @@ connections used in a deployed Flower federated AI system.
     Click the buttons above to toggle between the network diagrams for isolation modes
     **subprocess** and **process**.
 
-Mandatory Network Connections
------------------------------
+*******************************
+ Mandatory Network Connections
+*******************************
 
 Deployed Flower systems have at least two types of network connections:
 
@@ -56,14 +58,15 @@ Deployed Flower systems have at least two types of network connections:
   use TLS (see :doc:`how-to-enable-tls-connections` to learn more), but ``insecure``
   mode is supported for local testing.
 
-Optional Network Connections
-----------------------------
+******************************
+ Optional Network Connections
+******************************
 
 Depending on the SuperLink and SuperNode configuration, Flower systems can have/use a
 number of additional network connections.
 
 Flower Components APIs
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 All Flower components — SuperLink, ServerApp process (``flwr-serverapp``), SuperNode,
 and ClientApp process (``flwr-clientapp``) — expose APIs to interact with other Flower
@@ -99,7 +102,7 @@ deployment runtime, as summarized in the table below.
       - Communication between the SuperNode and the ``ClientApp`` process
 
 Isolation Mode
-~~~~~~~~~~~~~~
+==============
 
 Both Flower SuperLink and Flower SuperNode can use different isolation modes. Isolation
 mode ``subprocess`` configures the SuperLink/SuperNode to run ServerApp/ClientApp in a
@@ -135,7 +138,7 @@ SuperLink or SuperNode:
     internet).
 
 User Authentication
-~~~~~~~~~~~~~~~~~~~
+===================
 
 When user authentication is enabled, Flower uses an OIDC-compatible server to
 authenticate requests:
@@ -145,7 +148,7 @@ authenticate requests:
   a REST client to the OIDC-compatible server.
 
 Application-specific Connections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================
 
 Users who write Flower Apps (``ServerApp`` and ``ClientApp``) can also make additional
 network requests. This is, strictly speaking, not part of Flower as a Federated AI
@@ -172,7 +175,7 @@ Typical examples include:
   service.
 
 Communication Model
-~~~~~~~~~~~~~~~~~~~
+===================
 
 During real-world deployment, the push/pull communication model adopted by each
 component can influence decisions related to resource provisioning, scaling, monitoring,
