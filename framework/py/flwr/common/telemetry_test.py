@@ -16,13 +16,19 @@
 
 
 import os
-import time
 import unittest
+from concurrent.futures import Future
 from typing import Callable
 from unittest import mock
 from uuid import uuid4
 
-from flwr.common.telemetry import EventType, _get_partner_id, _get_source_id, event
+from flwr.common.telemetry import (
+    EventType,
+    _get_partner_id,
+    _get_source_id,
+    create_event,
+    event,
+)
 
 
 class TelemetryTest(unittest.TestCase):
@@ -43,22 +49,20 @@ class TelemetryTest(unittest.TestCase):
 
     @mock.patch("flwr.common.telemetry.FLWR_TELEMETRY_ENABLED", "1")
     def test_not_blocking(self) -> None:
-        """Test if the code is blocking.
-
-        If the code does not block duration_actual should be less than
-        0.001s.
-        """
+        """Test that event creation is delegated to the executor."""
         # Prepare
-        # Use 5ms as any blocking networked call would take longer.
-        duration_max = 0.005
-        start = time.time()
+        expected: Future[str] = Future()
 
         # Execute
-        event(EventType.PING)
-        duration_actual = time.time() - start
+        with mock.patch(
+            "flwr.common.telemetry.ThreadPoolExecutor.submit",
+            return_value=expected,
+        ) as submit:
+            actual = event(EventType.PING)
 
         # Assert
-        self.assertLess(duration_actual, duration_max)
+        self.assertIs(actual, expected)
+        submit.assert_called_once_with(create_event, EventType.PING, None)
 
     @mock.patch("flwr.common.telemetry.FLWR_TELEMETRY_ENABLED", "0")
     def test_telemetry_disabled(self) -> None:
