@@ -15,7 +15,7 @@ python = "^3.9"
 clang-format = "==17.0.6"
 isort = "==5.13.2"
 black = { version = "==24.2.0" }
-#taplo = "==0.9.3"
+taplo = "==0.9.3"
 docformatter = "==1.7.5"
 rope = "==1.13.0"
 semver = "==3.0.2"
