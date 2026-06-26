@@ -126,7 +126,7 @@ pipreqs = "==0.4.13"
 mdformat = "==0.7.18"
 mdformat-gfm = "==0.3.6"
 mdformat-frontmatter = "==2.0.1"
-mdformat-beautysh = "==0.1.1"
+mdformat-beautysh = "==1.0.0"
 twine = "==5.1.1"
 types-PyYAML = "^6.0.2"
 pyroma = "==4.2"
@@ -176,7 +176,6 @@ patterns = ["*.py"]
 ignore_patterns = []
 
 [tool.mypy]
-plugins = ["numpy.typing.mypy_plugin"]
 ignore_missing_imports = true
 strict = true
 
