@@ -274,7 +274,7 @@ class ArrayRecord(TypedDict[str, Array], InflatableObject):
 
             if not keep_input:
                 # Remove the reference
-                ndarrays[i] = None  # type: ignore
+                ndarrays[i] = cast(NDArray, None)
                 total_serialized_bytes += len(record[str(i)].data)
 
                 # If total serialized data exceeds the threshold, trigger GC
