@@ -127,17 +127,20 @@ class ArrayRecord(TypedDict[str, Array], InflatableObject):
     """
 
     @overload
-    def __init__(self) -> None: ...  # noqa: E704
+    def __init__(self) -> None:
+        ...  # noqa: E704
 
     @overload
     def __init__(  # noqa: E704
         self, array_dict: OrderedDict[str, Array], *, keep_input: bool = True
-    ) -> None: ...
+    ) -> None:
+        ...
 
     @overload
     def __init__(  # noqa: E704
         self, numpy_ndarrays: list[NDArray], *, keep_input: bool = True
-    ) -> None: ...
+    ) -> None:
+        ...
 
     @overload
     def __init__(  # noqa: E704
@@ -145,7 +148,8 @@ class ArrayRecord(TypedDict[str, Array], InflatableObject):
         torch_state_dict: OrderedDict[str, torch.Tensor],
         *,
         keep_input: bool = True,
-    ) -> None: ...
+    ) -> None:
+        ...
 
     def __init__(  # pylint: disable=too-many-arguments
         self,
