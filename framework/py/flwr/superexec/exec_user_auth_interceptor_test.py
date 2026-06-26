@@ -98,6 +98,7 @@ class TestExecUserAuthInterceptor(unittest.TestCase):
         self.assertEqual(response, "dummy_response")
         # Assert `shared_account_info` is not set
         account_info_from_context = shared_account_info.get()
+        assert account_info_from_context is not None
         self.assertIsNone(account_info_from_context.flwr_aid)
         self.assertIsNone(account_info_from_context.account_name)
 
@@ -205,6 +206,7 @@ class TestExecUserAuthInterceptor(unittest.TestCase):
 
         # Assert `shared_account_info` is set
         account_info_from_context = shared_account_info.get()
+        assert account_info_from_context is not None
         self.assertEqual(
             account_info_from_context.flwr_aid, self.expected_account_info.flwr_aid
         )
