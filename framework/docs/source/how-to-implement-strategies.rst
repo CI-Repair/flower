@@ -2,8 +2,9 @@
 .. meta::
     :description: Create custom federated learning strategies in Flower by modifying client sampling, training, aggregation, and evaluation for enhanced flexibility and control.
 
-Implement strategies
-====================
+######################
+ Implement strategies
+######################
 
 The strategy abstraction enables implementation of fully custom strategies. A strategy
 is basically the federated learning algorithm that runs on the server. Strategies decide
@@ -11,8 +12,9 @@ how to sample clients, how to configure clients for training, how to aggregate u
 and how to evaluate models. Flower provides a few built-in strategies which are based on
 the same API described below.
 
-The ``Strategy`` abstraction
-----------------------------
+******************************
+ The ``Strategy`` abstraction
+******************************
 
 All strategy implementation are derived from the abstract base class
 ``flwr.server.strategy.Strategy``, both built-in implementations and third party
@@ -177,8 +179,9 @@ The Flower server calls these methods in the following order:
 
 The following sections describe each of those methods in more detail.
 
-The ``initialize_parameters`` method
-------------------------------------
+**************************************
+ The ``initialize_parameters`` method
+**************************************
 
 ``initialize_parameters`` is called only once, at the very beginning of an execution. It
 is responsible for providing the initial global model parameters in a serialized form
@@ -224,8 +227,9 @@ is recommended to always use server-side parameter initialization.
     fundamental capability needed to implement hybrid approaches, for example, to
     fine-tune a pre-trained model using federated learning.
 
-The ``configure_fit`` method
-----------------------------
+******************************
+ The ``configure_fit`` method
+******************************
 
 ``configure_fit`` is responsible for configuring the upcoming round of training. What
 does *configure* mean in this context? Configuring a round means selecting clients and
@@ -261,8 +265,9 @@ selection logic. A client will only participate in a round if the corresponding
     models on different clients, or use different hyperparameters on different clients
     (via the ``config`` dict).
 
-The ``aggregate_fit`` method
-----------------------------
+******************************
+ The ``aggregate_fit`` method
+******************************
 
 ``aggregate_fit`` is responsible for aggregating the results returned by the clients
 that were selected and asked to train in ``configure_fit``.
@@ -288,8 +293,9 @@ aggregated metrics. The ``Parameters`` return value is optional because
 ``aggregate_fit`` might decide that the results provided are not sufficient for
 aggregation (e.g., too many failures).
 
-The ``configure_evaluate`` method
----------------------------------
+***********************************
+ The ``configure_evaluate`` method
+***********************************
 
 ``configure_evaluate`` is responsible for configuring the upcoming round of evaluation.
 What does *configure* mean in this context? Configuring a round means selecting clients
@@ -325,8 +331,9 @@ client selection logic. A client will only participate in a round if the corresp
     models on different clients, or use different hyperparameters on different clients
     (via the ``config`` dict).
 
-The ``aggregate_evaluate`` method
----------------------------------
+***********************************
+ The ``aggregate_evaluate`` method
+***********************************
 
 ``aggregate_evaluate`` is responsible for aggregating the results returned by the
 clients that were selected and asked to evaluate in ``configure_evaluate``.
@@ -352,8 +359,9 @@ aggregated metrics. The ``float`` return value is optional because
 ``aggregate_evaluate`` might decide that the results provided are not sufficient for
 aggregation (e.g., too many failures).
 
-The ``evaluate`` method
------------------------
+*************************
+ The ``evaluate`` method
+*************************
 
 ``evaluate`` is responsible for evaluating model parameters on the server-side. Having
 ``evaluate`` in addition to ``configure_evaluate``/``aggregate_evaluate`` enables
