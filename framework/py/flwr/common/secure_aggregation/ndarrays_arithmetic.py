@@ -19,6 +19,8 @@ from typing import Any
 import numpy as np
 from numpy.typing import NDArray
 
+DEFAULT_DTYPE: np.dtype[Any] = np.dtype(np.int64)
+
 
 def factor_combine(factor: int, parameters: list[NDArray[Any]]) -> list[NDArray[Any]]:
     """Combine factor with parameters."""
@@ -39,7 +41,7 @@ def get_parameters_shape(parameters: list[NDArray[Any]]) -> list[tuple[int, ...]
 
 def get_zero_parameters(
     dimensions_list: list[tuple[int, ...]],
-    dtype: np.dtype[Any] = np.dtype(np.int64),
+    dtype: np.dtype[Any] = DEFAULT_DTYPE,
 ) -> list[NDArray[Any]]:
     """Generate zero parameters based on the dimensions list."""
     return [np.zeros(dimensions, dtype=dtype) for dimensions in dimensions_list]
