@@ -63,7 +63,7 @@ flwr-clientapp = "flwr.client.clientapp:flwr_clientapp"
 [tool.poetry.dependencies]
 python = "^3.9.2"
 # Mandatory dependencies
-numpy = ">=1.26.0,<3.0.0"
+numpy = ">=1.26.0,<2.3.0"
 grpcio = "^1.62.3,!=1.65.0"
 protobuf = "^4.21.6"
 cryptography = "^44.0.1"
@@ -176,7 +176,6 @@ patterns = ["*.py"]
 ignore_patterns = []
 
 [tool.mypy]
-plugins = ["numpy.typing.mypy_plugin"]
 ignore_missing_imports = true
 strict = true
 
