@@ -92,7 +92,6 @@ testpaths = [
 [tool.mypy]
 ignore_missing_imports = true
 strict = false
-plugins = ""
 
 [[tool.mypy.overrides]]
 module = "flwr_baselines.scripts.*"

@@ -176,7 +176,6 @@ patterns = ["*.py"]
 ignore_patterns = []
 
 [tool.mypy]
-plugins = [""]
 ignore_missing_imports = true
 strict = true
 

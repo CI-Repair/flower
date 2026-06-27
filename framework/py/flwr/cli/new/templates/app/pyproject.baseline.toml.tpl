@@ -44,7 +44,6 @@ addopts = "-qq"
 [tool.mypy]
 ignore_missing_imports = true
 strict = false
-plugins = ""
 
 [tool.pylint."MESSAGES CONTROL"]
 disable = "duplicate-code,too-few-public-methods,useless-import-alias"
