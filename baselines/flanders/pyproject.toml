@@ -75,6 +75,7 @@ use_parentheses = true
 [tool.black]
 line-length = 88
 target-version = ["py38", "py39", "py310", "py311"]
+plugins = "numpy.typing.mypy_plugin"
 
 [tool.pytest.ini_options]
 minversion = "6.2"
