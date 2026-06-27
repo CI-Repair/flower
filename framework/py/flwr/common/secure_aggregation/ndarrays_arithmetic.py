@@ -33,7 +33,7 @@ def factor_extract(
     parameters: list[NDArray],
 ) -> tuple[int, list[NDArray]]:
     """Extract factor from parameters."""
-    return parameters[0][0], parameters[1:]
+    return int(parameters[0][0]), parameters[1:]
 
 
 def get_parameters_shape(parameters: list[NDArray]) -> list[tuple[int, ...]]:

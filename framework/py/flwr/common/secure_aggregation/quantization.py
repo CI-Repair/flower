@@ -24,12 +24,13 @@ from flwr.common.typing import NDArrayFloat, NDArrayInt
 
 def _stochastic_round(arr: NDArrayFloat) -> NDArrayInt:
     ret: NDArrayInt = np.ceil(arr).astype(np.int32)
-    rand_arr = np.random.rand(*ret.shape)
+    rand_arr: NDArrayFloat = np.asarray(np.random.rand(*ret.shape), dtype=np.float64)
+    diff: NDArrayFloat = np.asarray(np.subtract(ret, arr), dtype=np.float64)
     if len(ret.shape) == 0:
-        if rand_arr < ret - arr:
+        if rand_arr < diff:
             ret -= 1
     else:
-        ret[rand_arr < ret - arr] -= 1
+        ret[rand_arr < diff] -= 1
     return ret
 
 

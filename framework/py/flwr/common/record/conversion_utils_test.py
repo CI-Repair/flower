@@ -21,6 +21,7 @@ from io import BytesIO
 import numpy as np
 
 from ..constant import SType
+from ..typing import NDArray
 from .conversion_utils import array_from_numpy
 
 
@@ -30,7 +31,7 @@ class TestArrayFromNumpy(unittest.TestCase):
     def test_array_from_numpy(self) -> None:
         """Test the array_from_numpy function."""
         # Prepare
-        original_array = np.array([1, 2, 3], dtype=np.float32)
+        original_array: NDArray = np.array([1, 2, 3], dtype=np.float32)
 
         # Execute
         array_instance = array_from_numpy(original_array)

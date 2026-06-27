@@ -69,7 +69,7 @@ class TestArray(unittest.TestCase):
     def test_numpy_conversion_valid(self) -> None:
         """Test the numpy method with valid Array instance."""
         # Prepare
-        original_array = np.array([1, 2, 3], dtype=np.float32)
+        original_array: NDArray = np.array([1, 2, 3], dtype=np.float32)
 
         buffer = _get_buffer_from_ndarray(original_array)
 
@@ -102,7 +102,7 @@ class TestArray(unittest.TestCase):
     def test_array_from_numpy(self) -> None:
         """Test the array_from_numpy function."""
         # Prepare
-        original_array = np.array([1, 2, 3], dtype=np.float32)
+        original_array: NDArray = np.array([1, 2, 3], dtype=np.float32)
 
         # Execute
         array_instance = Array.from_numpy_ndarray(original_array)
