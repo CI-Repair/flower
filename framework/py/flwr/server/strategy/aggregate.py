@@ -55,11 +55,10 @@ def aggregate_inplace(results: list[tuple[ClientProxy, FitRes]]) -> NDArrays:
     def _try_inplace(
         x: NDArray, y: Union[NDArray, float], np_binary_op: np.ufunc
     ) -> NDArray:
-        return (  # type: ignore[no-any-return]
-            np_binary_op(x, y, out=x)
-            if np.can_cast(y, x.dtype, casting="same_kind")
-            else np_binary_op(x, np.array(y, x.dtype), out=x)
-        )
+        y_arr: NDArray = np.asarray(y)
+        if not np.can_cast(y_arr.dtype, x.dtype, casting="same_kind"):
+            y_arr = np.asarray(y_arr, dtype=x.dtype)
+        return cast(NDArray, np_binary_op(x, y_arr, out=x))
 
     # Let's do in-place aggregation
     # Get first result, then add up each other
@@ -123,7 +122,7 @@ def aggregate_krum(
 
     if to_keep > 0:
         # Choose to_keep clients and return their average (MultiKrum)
-        sorted_indices: list[int] = np.argsort(scores).tolist()
+        sorted_indices = cast(np.ndarray[Any, Any], np.argsort(scores)).tolist()
         best_indices = sorted_indices[::-1][len(scores) - to_keep :]  # noqa: E203
         best_results = [results[i] for i in best_indices]
         return aggregate(best_results)
@@ -250,7 +249,10 @@ def _compute_distances(weights: list[NDArrays]) -> NDArray:
     for parameters in weights:
         concatenated: NDArray = np.concatenate(parameters, axis=None)
         flat_w.append(concatenated.ravel())
-    distance_matrix = np.zeros((len(weights), len(weights)))
+    distance_matrix: np.ndarray[Any, np.dtype[np.float64]] = np.zeros(
+        (len(weights), len(weights)),
+        dtype=np.float64,
+    )
     for i, flat_w_i in enumerate(flat_w):
         for j, flat_w_j in enumerate(flat_w):
             delta = flat_w_i - flat_w_j
