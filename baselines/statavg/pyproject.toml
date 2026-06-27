@@ -51,7 +51,7 @@ testpaths = ["flwr_baselines"]
 [tool.mypy]
 ignore_missing_imports = true
 strict = false
-plugins = "numpy.typing.mypy_plugin"
+plugins = ""
 
 [tool.pylint."MESSAGES CONTROL"]
 disable = "duplicate-code,too-few-public-methods,useless-import-alias,no-member"
