@@ -1,8 +1,6 @@
----
-tags: [finetuning, speech, transformers]
-dataset: [SpeechCommands]
-framework: [transformers, whisper]
----
+______________________________________________________________________
+
+## tags: \[finetuning, speech, transformers\] dataset: \[SpeechCommands\] framework: \[transformers, whisper\]
 
 # On-device Federated Finetuning for Speech Classification
 

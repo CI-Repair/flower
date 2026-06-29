@@ -1,8 +1,6 @@
----
-tags: [quickstart, classification, tabular]
-dataset: [adult-census-income]
-framework: [catboost]
----
+______________________________________________________________________
+
+## tags: \[quickstart, classification, tabular\] dataset: \[adult-census-income\] framework: \[catboost\]
 
 # Federated Learning with CatBoost and Flower (Quickstart Example)
 

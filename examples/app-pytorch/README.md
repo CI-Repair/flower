@@ -1,8 +1,6 @@
----
-tags: [basic, vision]
-dataset: [CIFAR-10]
-framework: [torch]
----
+______________________________________________________________________
+
+## tags: \[basic, vision\] dataset: \[CIFAR-10\] framework: \[torch\]
 
 # app-pytorch: A Flower / PyTorch app
 

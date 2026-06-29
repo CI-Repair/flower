@@ -1,8 +1,6 @@
----
-tags: [basic, vision, fds]
-dataset: [CIFAR-10]
-framework: [tensorflow, scikit-learn]
----
+______________________________________________________________________
+
+## tags: \[basic, vision, fds\] dataset: \[CIFAR-10\] framework: \[tensorflow, scikit-learn\]
 
 # Custom Metrics for Federated Learning with TensorFlow and Flower
 

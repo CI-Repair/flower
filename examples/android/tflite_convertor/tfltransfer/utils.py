@@ -13,7 +13,6 @@
 # limitations under the License.
 """Helper utilities for various parts of the converter."""
 
-
 from __future__ import absolute_import, division, print_function
 
 from tensorflow.compat import v1 as tfv1

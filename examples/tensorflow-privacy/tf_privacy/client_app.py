@@ -13,7 +13,6 @@ from flwr.common import Context
 from tf_privacy.task import load_data, load_model
 import numpy as np
 
-
 # Make TensorFlow log less verbose
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 

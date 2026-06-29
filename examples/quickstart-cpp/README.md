@@ -1,8 +1,6 @@
----
-tags: [quickstart, linear regression, tabular]
-dataset: [Synthetic]
-framework: [C++]
----
+______________________________________________________________________
+
+## tags: \[quickstart, linear regression, tabular\] dataset: \[Synthetic\] framework: \[C++\]
 
 # Flower Clients in C++ (under development)
 

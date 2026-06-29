@@ -27,7 +27,7 @@ from flwr.proto.appio_pb2 import (  # pylint:disable=E0611
     PullAppMessagesResponse,
     PushAppOutputsResponse,
 )
-from flwr.proto.message_pb2 import Context as ProtoContext  # pylint:disable=E0611
+from flwr.proto.message_pb2 import Context as ProtoContext, ObjectTree  # pylint:disable=E0611
 from flwr.proto.run_pb2 import Run as ProtoRun  # pylint:disable=E0611
 from flwr.supernode.runtime.run_clientapp import (
     pull_clientappinputs,
@@ -63,6 +63,7 @@ class TestClientAppIoServicer(unittest.TestCase):
             fab=fab_to_proto(mock_fab),
         )
         self.mock_stub.PullMessage.return_value = PullAppMessagesResponse(
+            message_object_trees=[ObjectTree(object_id="test-object-id")],
             messages_list=[message_to_proto(mock_message)]
         )
         self.mock_stub.PullClientAppInputs.return_value = mock_response

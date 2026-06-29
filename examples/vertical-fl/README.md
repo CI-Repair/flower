@@ -1,8 +1,6 @@
----
-tags: [vertical, tabular, advanced]
-dataset: [Titanic]
-framework: [torch, pandas, scikit-learn]
----
+______________________________________________________________________
+
+## tags: \[vertical, tabular, advanced\] dataset: \[Titanic\] framework: \[torch, pandas, scikit-learn\]
 
 # Vertical Federated Learning with Flower
 

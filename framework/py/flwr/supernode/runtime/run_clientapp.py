@@ -223,6 +223,8 @@ def pull_clientappinputs(
         )
         run_id = context.run_id
         node = Node(node_id=context.node_id)
+        if not pull_msg_res.message_object_trees:
+            raise ValueError("No message object trees received")
         object_tree = pull_msg_res.message_object_trees[0]
         message = pull_and_inflate_object_from_tree(
             object_tree,

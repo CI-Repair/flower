@@ -19,7 +19,6 @@ from flwr.client import Client, ClientApp, NumPyClient
 from flwr.common import Context
 from flwr.common.logger import log
 
-
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # To mute warnings reminding that we need to train the model to a downstream task

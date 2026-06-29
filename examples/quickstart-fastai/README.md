@@ -1,8 +1,6 @@
----
-tags: [quickstart, vision]
-dataset: [MNIST]
-framework: [fastai]
----
+______________________________________________________________________
+
+## tags: \[quickstart, vision\] dataset: \[MNIST\] framework: \[fastai\]
 
 # Federated Learning with fastai and Flower (Quickstart Example)
 

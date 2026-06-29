@@ -1,8 +1,6 @@
----
-tags: [quickstart, llm, nlp, sentiment]
-dataset: [IMDB]
-framework: [transformers]
----
+______________________________________________________________________
+
+## tags: \[quickstart, llm, nlp, sentiment\] dataset: \[IMDB\] framework: \[transformers\]
 
 # Federated Learning with HuggingFace Transformers and Flower (Quickstart Example)
 

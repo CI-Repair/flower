@@ -1,8 +1,6 @@
----
-tags: [advanced, vision, fds, wandb]
-dataset: [Fashion-MNIST]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[advanced, vision, fds, wandb\] dataset: \[Fashion-MNIST\] framework: \[torch, torchvision\]
 
 # Federated Learning with PyTorch and Flower (Advanced Example)
 

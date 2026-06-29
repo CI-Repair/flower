@@ -1,8 +1,6 @@
----
-tags: [colab, vision, simulation]
-dataset: [CIFAR-10]
-framework: [torch]
----
+______________________________________________________________________
+
+## tags: \[colab, vision, simulation\] dataset: \[CIFAR-10\] framework: \[torch\]
 
 # 30-minute tutorial running Flower simulation with PyTorch
 

@@ -13,7 +13,6 @@
 # limitations under the License.
 """End-to-end tests that check model correctness."""
 
-
 from __future__ import absolute_import, division, print_function
 
 import os

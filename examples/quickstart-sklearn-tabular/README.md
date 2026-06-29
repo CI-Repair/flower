@@ -1,8 +1,6 @@
----
-tags: [quickstart, tabular, fds]
-dataset: [Iris]
-framework: [scikit-learn]
----
+______________________________________________________________________
+
+## tags: \[quickstart, tabular, fds\] dataset: \[Iris\] framework: \[scikit-learn\]
 
 # Federated Learning with scikit-learn and Flower (Quickstart Example)
 

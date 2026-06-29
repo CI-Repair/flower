@@ -1,8 +1,6 @@
----
-tags: [finetuning, vision, fds]
-dataset: [Oxford Flower-102]
-framework: [torch, torchvision]
----
+______________________________________________________________________
+
+## tags: \[finetuning, vision, fds\] dataset: \[Oxford Flower-102\] framework: \[torch, torchvision\]
 
 # Federated Finetuning of a Vision Transformer with Flower
 
